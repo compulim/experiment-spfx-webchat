@@ -9,15 +9,23 @@ Under Docker, host Web Chat and other Web Parts or React components in SharePoin
 
 # How to use
 
-1. `npm run build` - to build the Docker container
-1. `npm start` - to run the Docker image
+1. `npm run build` - to build the Docker image
+1. `npm start` - to run the Docker container
 1. Browse to https://localhost:4321/ - to trust the self-signed certificate
    - When presented with a page saying "Your connection isn't private (NET::ERR_CERT_AUTHORITY_INVALID)"
    - On your keyboard, type `thisisunsafe`
 1. Browse to https://&lt;your-sharepoint&gt;.sharepoint.com/sites/&lt;your-site&gt;/_layouts/15/workbench.aspx
 1. Add the component "Web Chat" to the workbench
 
-For development, it is recommended to use VS Code with Remote Containers extension to connect to the Docker image directly.
+# How to develop
+
+For development, it is recommended to use [Visual Studio Code Remote - Containers extension]([url](https://code.visualstudio.com/docs/remote/containers)) to connect to the Docker image directly:
+
+1. Make sure the Docker container is running
+1. Open Visual Studio Code
+1. [Install the "Remote - Containers" extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+1. Open Command Palette (<kbd>F1</kbd>)
+1. Type "Remote-Containers: Attach to Running Container..."
 
 # Screenshots
 
