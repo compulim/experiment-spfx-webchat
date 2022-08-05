@@ -14,7 +14,7 @@ Hosting Web Chat in SharePoint Framework (SPFx) in Docker.
 1. Browse to https://localhost:4321/ - to trust the self-signed certificate
    - When presented with a page saying "Your connection isn't private (NET::ERR_CERT_AUTHORITY_INVALID)"
    - On your keyboard, type `thisisunsafe`
-1. Browse to https://<your-sharepoint>.sharepoint.com/sites/<your-site>/_layouts/15/workbench.aspx
+1. Browse to https://&lt;your-sharepoint&gt;.sharepoint.com/sites/&lt;your-site&gt;/_layouts/15/workbench.aspx
 1. Add the component "Web Chat" to the workbench
 
 For development, it is recommended to use VS Code with Remote Containers extension to connect to the Docker image directly.
@@ -34,6 +34,12 @@ When we worked on this repo, we hit a few obstacles. We are documenting them her
 ### SharePoint site always load https://localhost:4321/, with a self-signed certificate
 
 Trusting a self-signed certificate generated dynamically in Docker is not trivial as the certificate change on every build. The host machine need to export the PEM and re-trust it on every build is a hassle.
+
+Few attempts:
+- Modifying the URL via ?debugManifestsFile=http://localhost:4321/temp/manifests.js does not work
+- The code in workbench did try to load via https://, then fallback to http://
+   - However, their fallback code did not work and it fail at first attempt
+   - Thus, it never try to load via http://
 
 Using `thisisunsafe` will trust the certificate temporarily in the browser.
 
