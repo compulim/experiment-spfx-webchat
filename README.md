@@ -22,9 +22,9 @@ Under Docker, host Web Chat and other Web Parts or React components in SharePoin
 For development, it is recommended to use [Visual Studio Code Remote - Containers extension]([url](https://code.visualstudio.com/docs/remote/containers)) to connect to the Docker image directly:
 
 1. Make sure the Docker container is running
-1. Open Visual Studio Code
+1. Launch Visual Studio Code
 1. [Install the "Remote - Containers" extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-1. Open Command Palette (<kbd>F1</kbd>)
+1. Open the Command Palette
 1. Type "Remote-Containers: Attach to Running Container..."
 
 # Screenshots
