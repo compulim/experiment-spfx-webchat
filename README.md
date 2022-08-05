@@ -36,12 +36,13 @@ When we worked on this repo, we hit a few obstacles. We are documenting them her
 Trusting a self-signed certificate generated dynamically in Docker is not trivial as the certificate change on every build. The host machine need to export the PEM and re-trust it on every build is a hassle.
 
 Few attempts:
+
 - Modifying the URL via ?debugManifestsFile=http://localhost:4321/temp/manifests.js does not work
 - The code in workbench did try to load via https://, then fallback to http://
    - However, their fallback code did not work and it fail at first attempt
    - Thus, it never try to load via http://
 
-Using `thisisunsafe` will trust the certificate temporarily in the browser.
+At the end, we used the `thisisunsafe` and temporarily trusting the certificate in the browser.
 
 ### `gulp serve` server only listens to localhost but not 0.0.0.0
 
@@ -52,9 +53,12 @@ Instead, we wrote [a proxy](src/proxy.js) to expose https://localhost:4321 as ht
 ## Minors
 
 - Creating a new Microsoft 365 account takes hours
-   - When creating a Microsoft account, it don't prompt for first name and last name. However, Microsoft 365 requires that.
-   - Adding first name and last name to a Microsoft account takes 1-2 hours to propagate to Micrsoft 365.
+   - When creating a Microsoft account, it don't prompt for first and last name. However, Microsoft 365 requires first and last name
+      - Microsoft 365 said "We're missing some information. Please add your first and last name to your Microsoft Account at https://account.microsoft.com/profile and try again later. It might take a few hours for the change to appear in the system."
+   - In our experience, it took 1-2 hours before we can successfully create a tenant
 - Yeoman does not like to run as root
-- `npm install` takes 4 minutes to complete
+   - We have to `useradd spfx`
+- `npm install` for SPFx dependencies takes 4 minutes to complete
    - Early development of the `Dockerfile` takes a lot of time
 - No live reload functionality although the `gulp serve` hosted one
+   - Tried to trust the certificate on https://localhost:35729
