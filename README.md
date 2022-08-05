@@ -47,7 +47,7 @@ Using `thisisunsafe` will trust the certificate temporarily in the browser.
 
 We tried to modify `config/serve.json/hostname` to listen to 0.0.0.0, however, the generated manifest will also point resources to https://0.0.0.0:4321/, which is bad.
 
-Instead, we wrote a proxy to expose https://localhost:4321 as https://0.0.0.0:54321 (with another self-signed certificate).
+Instead, we wrote [a proxy](src/proxy.js) to expose https://localhost:4321 as https://0.0.0.0:54321 (with another [self-signed](https://npmjs.com/package/selfsigned) certificate).
 
 ## Minors
 
