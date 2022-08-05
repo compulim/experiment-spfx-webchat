@@ -1,11 +1,11 @@
 # experiment-spfx-webchat
 
-Hosting Web Chat in SharePoint Framework (SPFx) in Docker.
+Under Docker, host Web Chat and other Web Parts or React components in SharePoint Framework (SPFx).
 
 # Prerequisites
 
-1. Create your SharePoint tenant
-1. Install Docker on WSL2
+1. Create your Microsoft 365 tenant with SharePoint
+1. [Install Docker on WSL2](https://aka.ms/wsl2)
 
 # How to use
 
