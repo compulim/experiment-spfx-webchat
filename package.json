@@ -1,0 +1,13 @@
+{
+  "name": "experiment-spfx-webchat",
+  "version": "0.0.0-0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "docker build -t spfx .",
+    "start": "docker run --rm -it -p 4321:54321 -p 35729:35729 spfx"
+  },
+  "author": "William Wong (https://github.com/compulim)",
+  "license": "MIT",
+  "type": "module"
+}
