@@ -21,7 +21,7 @@ For development, it is recommended to use VS Code with Remote Containers extensi
 
 # Screenshots
 
-![image](https://user-images.githubusercontent.com/1622400/183159245-2faa7d50-5cab-4e34-8c85-a6c0b101e708.png)
+![image](https://user-images.githubusercontent.com/1622400/183159352-e8bf4952-7d3e-4e1f-b81f-5b2c8f05caab.png)
 
 ![image](https://user-images.githubusercontent.com/1622400/183159262-fafe1bd1-1f38-4da6-8918-96f62fd03dcd.png)
 
