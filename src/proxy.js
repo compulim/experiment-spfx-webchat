@@ -6,7 +6,7 @@ const { cert, 'private': key } = selfSigned.generate([{ name: 'commonName', valu
 
 createServer({ cert, key }, createProxyMiddleware({
   secure: false,
-  target: 'https://localhost:4321'
+  target: 'http://localhost:4321'
 })).listen(54321, () => {
   console.log('Proxy listening to 54321');
 });
